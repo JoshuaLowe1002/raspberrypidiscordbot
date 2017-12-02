@@ -25,6 +25,13 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === '?code') {
+    	message.reply('The code for me can be found here: https://github.com/JoshuaLowe1002/raspberrypidiscordbot/');
+  	}
+});
+
+
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "what is my avatar"
