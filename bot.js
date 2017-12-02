@@ -23,11 +23,5 @@ client.on('message', message => {
   	}
 });
 
-const swearWords = ["brexit"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("Oh no you said a bad word!!!");
-  // Or just do message.delete();
-}
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
