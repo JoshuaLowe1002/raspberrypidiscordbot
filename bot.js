@@ -41,9 +41,4 @@ client.on('message', message => {
   }
 });
 
-const swearWords = ["brexit"];
-if( swearWords.some(word => message.content.includes(word)) ) {
-  message.reply("Oh no you said a bad word!!!");
-  
-}
 
