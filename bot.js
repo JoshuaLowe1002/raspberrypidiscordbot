@@ -25,6 +25,12 @@ client.on('message', message => {
   	}
 });
 
+client.on('message', message => {
+    if (message.content === 'brexit') {
+    	message.edit('Bad Word Used. Message Deleted!');
+  	}
+});
+
 
 // Create an event listener for messages
 client.on('message', message => {
