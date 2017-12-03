@@ -50,11 +50,6 @@ client.on('message', message => {
   }
 });
 
-client.on('message', message => {
-    if (message.content === '!help') {
-    	message.reply('Here are the commands you can use:\n```!ping - I will reply Pong\n!code - I will give you the link to my source code\nWhat is a raspberry pi? - I will tell you\nCan you reccommend any other discord channels? - I will give you links``');
-  	}
-});
 
 
 client.login(process.env.BOT_TOKEN);
