@@ -27,7 +27,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === 'brexit') {
-    	message.edit('Bad Word Used. Message Deleted!');
+    	message.delete();
   	}
 });
 
