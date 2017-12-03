@@ -52,10 +52,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!help') {
-    	message.reply('Here are the commands you can use:');
-        message.reply['```Test',
-                      'Another test```'
-                     ];
+    	message.reply('Here are the commands you can use:\n Test');
   	}
 });
 
