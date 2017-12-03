@@ -21,7 +21,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '!help') {
-    	message.reply('Hi!\nWhat is a Raspberry Pi you ask?\nThe Raspberry Pi is a series of small single-board computers developed in the United Kingdom by the Raspberry Pi Foundation to promote the teaching of basic computer science in schools and in developing countries');
+    	message.reply('');
   	}
 });
 
@@ -32,13 +32,21 @@ client.on('message', message => {
 });
 
 
+// Create an event listener for messages
+client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === 'what is a raspberry pi?') {
+    // Send the user's avatar URL
+    message.reply('Hi!\nWhat is a Raspberry Pi you ask?\nThe Raspberry Pi is a series of small single-board computers developed in the United Kingdom by the Raspberry Pi Foundation to promote the teaching of basic computer science in schools and in developing countries');
+  }
+});
 
 // Create an event listener for messages
 client.on('message', message => {
   // If the message is "what is my avatar"
-  if (message.content === 'what is my avatar') {
+  if (message.content === 'can you reccommend any other discord channels?') {
     // Send the user's avatar URL
-    message.reply(message.author.avatarURL);
+    message.reply('Yes!\nThe Pimoroni one is a great channel to join: https://discord.gg/gxhmNA3\n The Gadgetoid one is also very cool, join here: https://discord.gg/ykCpYQn\n And last but not least, the Pi Wars Robot Discord: https://discord.gg/2hvjeTp');
   }
 });
 
