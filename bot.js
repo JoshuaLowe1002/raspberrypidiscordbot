@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 var client = new Discord.Client();
 
-client.login(process.env.BOT_TOKEN);
+
 
 client.on('ready', () => {
     console.log('I am ready!');
@@ -48,4 +48,4 @@ if( swearWords.some(word => message.content.includes(word)) ) {
   // Or just do message.delete();
 }
 
-
+client.login(process.env.BOT_TOKEN);
