@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 var client = new Discord.Client();
+const music = require('discord.js-music');
 
 client.login(process.env.BOT_TOKEN);
 
@@ -29,6 +30,14 @@ client.on('message', message => {
     if (message.content === '?code') {
     	message.reply('The code for me can be found here: https://github.com/JoshuaLowe1002/raspberrypidiscordbot/');
   	}
+});
+
+music(Bot, {
+	prefix: '-',       // Prefix of '-'.
+	global: false,     // Server-specific queues.
+	maxQueueSize: 10,  // Maximum queue size of 10.
+	clearInvoker: true, // If permissions applicable, allow the bot to delete the messages that invoke it (start with prefix)
+    channel: 'music'   // Name of voice channel to join. If omitted, will instead join user's voice channel.
 });
 
 
